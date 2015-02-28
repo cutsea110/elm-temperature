@@ -1,0 +1,13 @@
+{
+    "version": "1.0.0",
+    "summary": "handle something around temperature.",
+    "repository": "https://github.com/cutsea110/elm-temperature.git",
+    "license": "BSD3",
+    "source-directories": [
+        "."
+    ],
+    "exposed-modules": ["Temperature"],
+    "dependencies": {
+        "elm-lang/core": "1.1.1 <= v < 2.0.0"
+    }
+}
