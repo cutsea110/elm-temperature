@@ -6,7 +6,7 @@ module Temperature (kelvinToRGB, kelvinToColor) where
 
 -}
 
-import Color (Color, rgba)
+import Color exposing (Color, rgba)
 
 pair3 : (a -> b) -> (a, a, a) -> (b, b, b)
 pair3 f (x, y, z) = (f x, f y, f z)
@@ -28,9 +28,9 @@ kelvinToRGB t =
         norm base = pair3 (\clr -> round ((clr / base) * 255))
         unnorm = pair3 (\clr -> round (clr * 255))
     in
-      if | r > 1.0  -> norm r (r, g, b)
-         | b > 1.0 -> norm b (r, g, b)
-         | otherwise -> unnorm (r, g, b)
+      if r > 1.0  then norm r (r, g, b)
+      else if b > 1.0 then norm b (r, g, b)
+           else unnorm (r, g, b)
 
 {-| calculate RGB from Kelvin and alpha
 
