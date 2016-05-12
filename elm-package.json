@@ -1,12 +1,12 @@
 {
-    "version": "1.1.0",
-    "summary": "helpful summary of your project, less than 80 characters",
-    "repository": "https://github.com/user/project.git",
+    "version": "1.0.1",
+    "summary": "handle something around temperature.",
+    "repository": "https://github.com/cutsea110/elm-temperature.git",
     "license": "BSD3",
     "source-directories": [
         "."
     ],
-    "exposed-modules": [],
+    "exposed-modules": ["Temperature"],
     "dependencies": {
         "elm-lang/core": "3.0.0 <= v < 5.0.0"
     },
